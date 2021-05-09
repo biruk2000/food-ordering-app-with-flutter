@@ -128,7 +128,9 @@ class _hotelpageState extends State<hotelpage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 15,),
+                  SizedBox(
+                    height: 15,
+                  ),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Column(
@@ -136,45 +138,61 @@ class _hotelpageState extends State<hotelpage> {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text("Today's Special", style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w700
-                              ),
+                            Text(
+                              "Today's Special",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w700),
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(
+                              width: 10,
+                            ),
                             Expanded(
-                              child: Container(
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  height: 0.5,
-                                  color: Colors.grey,
-                                )
-                              ),
+                                child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              height: 0.5,
+                              color: Colors.grey,
+                            )),
                           ],
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         placesWidget("food1", "sandwich"),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text("Dishes", style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w700
-                              ),
+                            Text(
+                              "Dishes",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w700),
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(
+                              width: 10,
+                            ),
                             Expanded(
-                              child: Container(
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  height: 0.5,
-                                  color: Colors.grey,
-                                )
-                              ),
+                                child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              height: 0.5,
+                              color: Colors.grey,
+                            )),
                           ],
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              dishWidget("burger", "special burger", "5 burger served in a row"),
+                              dishWidget("sandwich", "specisal sandwich", "5 burger served in a row"),
+                              dishWidget("piza", "special piza", "5 burger served in a row"),
+                              dishWidget("firfir", "firfr be kibe", "5 burger served in a row"),
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -188,7 +206,7 @@ class _hotelpageState extends State<hotelpage> {
     );
   }
 
-   Row placesWidget(String img, String name) {
+  Row placesWidget(String img, String name) {
     return Row(
       children: [
         Container(
@@ -244,7 +262,7 @@ class _hotelpageState extends State<hotelpage> {
           ),
         ),
         InkWell(
-          onTap: (){},
+          onTap: () {},
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
